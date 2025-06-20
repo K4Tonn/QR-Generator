@@ -1,9 +1,9 @@
-# QR-Generator
+# QR-Generator Hasil Gabut
 
-##Dapat membuat tipe QR
-###1. URL
-###2. Teks
-###3. Email
-###4. Telepon
-###5. SMS
-###6. Wifi
+## Dapat membuat tipe QR
+### 1. URL
+### 2. Teks
+### 3. Email
+### 4. Telepon
+### 5. SMS
+### 6. Wifi
