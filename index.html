@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="theme-toggle-wrapper">
+    <button id="themeToggle"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <h1>QR Code Generator</h1>
+      <p>Buat kode QR untuk URL, teks, kontak, dan lainnya</p>
+    </div>
+
+    <div class="main">
+      <div class="form">
+        <label>Konten QR Code</label>
+        <input type="text" id="qr-text" placeholder="https://contoh.com" value="https://github.com"/>
+
+        <label>Ukuran QR Code <span id="size-val">200px</span></label>
+        <input type="range" id="qr-size" min="100" max="300" value="200" />
+
+        <label>Warna</label>
+        <div class="colors">
+          <input type="color" id="qr-color" value="#302e81" />
+          <input type="color" id="qr-bgcolor" value="#ffffff" />
+        </div>
+
+        <label>Tipe Konten</label>
+        <select id="qr-type">
+          <option value="url">URL</option>
+          <option value="text">Teks</option>
+          <option value="email">Email</option>
+          <option value="phone">Telepon</option>
+          <option value="sms">SMS</option>
+          <option value="wifi">Wi-Fi</option>
+        </select>
+
+        <button id="generate-btn">Generate QR Code</button>
+      </div>
+
+      <div class="preview">
+        <h2>Preview QR Code</h2>
+        <div id="qrcode" class="qr-box"></div>
+        <button id="download-btn" disabled>Download QR Code</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
